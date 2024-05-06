@@ -1,4 +1,4 @@
-# Godot Project Template by BD21
+# Godot Extra Nodes by BD21
 
 Contained in this repository are custom nodes for easing your game development experience in Godot.
 
