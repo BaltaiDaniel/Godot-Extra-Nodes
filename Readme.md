@@ -12,8 +12,7 @@ Contained in this repository are custom nodes for easing your game development e
 
 To use this template in an existing project, simply copy the `CUSTOM_NODES` folder to the root of your project folder. To use a custom node, simply instance it as a scene in the 2D editor.
 
-![Instantiate child scene]("https://drive.google.com/file/d/1GHnMIzbztLLWqyrhm1-PpseAbyIUVoFA/view?usp=sharing")
-![Pick any custom node]("https://drive.google.com/file/d/1BMGqFdyYp73Qm6wwg7M9_Yvwb9SszMyk/view?usp=sharing")
+![Instantiate child scene]("[[https://drive.google.com/file/d/1GHnMIzbztLLWqyrhm1-PpseAbyIUVoFA/view?usp=sharing](https://imgur.com/a/PZFGM8R)](https://imgur.com/a/PZFGM8R)")
 
 ## Features
 
