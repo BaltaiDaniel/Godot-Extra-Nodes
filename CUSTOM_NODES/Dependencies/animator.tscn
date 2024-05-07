@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://db8n6aru6qodb"]
+
+[ext_resource type="Script" path="res://CUSTOM_NODES/Dependencies/animator.gd" id="1_gfcqa"]
+
+[node name="Animator" type="Node"]
+script = ExtResource("1_gfcqa")

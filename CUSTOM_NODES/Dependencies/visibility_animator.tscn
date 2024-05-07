@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn3dk5316bajm"]
+
+[ext_resource type="Script" path="res://CUSTOM_NODES/Dependencies/visibility_animator.gd" id="1_dumsx"]
+[ext_resource type="PackedScene" uid="uid://db8n6aru6qodb" path="res://CUSTOM_NODES/Dependencies/animator.tscn" id="2_mbtco"]
+
+[node name="VisibilityAnimator" type="Node"]
+script = ExtResource("1_dumsx")
+
+[node name="Animator" parent="." instance=ExtResource("2_mbtco")]

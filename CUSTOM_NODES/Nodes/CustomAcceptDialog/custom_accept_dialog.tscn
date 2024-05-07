@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2b4kqa5erkyr"]
+
+[ext_resource type="Theme" uid="uid://dti6jjf40in8i" path="res://CUSTOM_NODES/Dependencies/themes/MAIN.tres" id="1_3ntgp"]
+[ext_resource type="Material" uid="uid://do5fl7oqi8yxm" path="res://CUSTOM_NODES/Dependencies/shaders/blur_shader.tres" id="1_m8w6w"]
+[ext_resource type="Script" path="res://CUSTOM_NODES/Nodes/CustomAcceptDialog/custom_accept_dialog.gd" id="1_uahe6"]
+[ext_resource type="Script" path="res://CUSTOM_NODES/Nodes/BlurBG/blur_bg.gd" id="2_2dshb"]
+[ext_resource type="PackedScene" uid="uid://c0fggauqnmu7w" path="res://CUSTOM_NODES/Nodes/CustomBtnAnimated/custom_btn_animated.tscn" id="3_rqrlp"]
+[ext_resource type="PackedScene" uid="uid://db8n6aru6qodb" path="res://CUSTOM_NODES/Dependencies/animator.tscn" id="5_76wtk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3x42"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_46uwa"]
+
+[node name="CustomAcceptDialog" type="PanelContainer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3ntgp")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_w3x42")
+script = ExtResource("1_uahe6")
+
+[node name="blur_bg" type="ColorRect" parent="."]
+material = ExtResource("1_m8w6w")
+layout_mode = 2
+script = ExtResource("2_2dshb")
+
+[node name="Diag" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(650, 700)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Diag"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Diag/VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "F"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="Diag/VBoxContainer"]
+layout_mode = 2
+
+[node name="Content" type="Label" parent="Diag/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.811765)
+custom_minimum_size = Vector2(10, 403)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "{content}"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 4
+max_lines_visible = 7
+
+[node name="Buttons" type="HBoxContainer" parent="Diag/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PrimaryBtn" parent="Diag/VBoxContainer/Buttons" instance=ExtResource("3_rqrlp")]
+layout_mode = 2
+
+[node name="SecondaryBtn" parent="Diag/VBoxContainer/Buttons" instance=ExtResource("3_rqrlp")]
+modulate = Color(0.843137, 0, 0, 1)
+layout_mode = 2
+
+[node name="NormalStyle" parent="Diag/VBoxContainer/Buttons/SecondaryBtn" index="0"]
+theme_override_styles/panel = SubResource("StyleBoxEmpty_46uwa")
+
+[node name="HoverStyle" parent="Diag/VBoxContainer/Buttons/SecondaryBtn" index="1"]
+theme_override_styles/panel = SubResource("StyleBoxEmpty_46uwa")
+
+[node name="PressedStyle" parent="Diag/VBoxContainer/Buttons/SecondaryBtn" index="2"]
+theme_override_styles/panel = SubResource("StyleBoxEmpty_46uwa")
+
+[node name="Animator" parent="." instance=ExtResource("5_76wtk")]
+
+[connection signal="pressed" from="Diag/VBoxContainer/Buttons/PrimaryBtn" to="." method="_on_primary_btn_pressed"]
+[connection signal="pressed" from="Diag/VBoxContainer/Buttons/SecondaryBtn" to="." method="_on_secondary_btn_pressed"]
+
+[editable path="Diag/VBoxContainer/Buttons/SecondaryBtn"]

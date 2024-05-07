@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqs1d6tjd24e7"]
+
+[ext_resource type="Script" path="res://CUSTOM_NODES/Nodes/CustomHBoxContainer/CustomHBoxConatainer.gd" id="1_ahf15"]
+[ext_resource type="PackedScene" uid="uid://db8n6aru6qodb" path="res://CUSTOM_NODES/Dependencies/animator.tscn" id="2_rg2rt"]
+
+[node name="CustomHBoxConatainer" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahf15")
+
+[node name="Animator" parent="." instance=ExtResource("2_rg2rt")]
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

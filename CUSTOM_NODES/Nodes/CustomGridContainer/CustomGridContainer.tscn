@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxchl3hrignpd"]
+
+[ext_resource type="Script" path="res://CUSTOM_NODES/Nodes/CustomGridContainer/CustomGridContainer.gd" id="1_djaot"]
+[ext_resource type="PackedScene" uid="uid://dn3dk5316bajm" path="res://CUSTOM_NODES/Dependencies/visibility_animator.tscn" id="2_jqy35"]
+
+[node name="CustomGridContainer" type="GridContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_djaot")
+
+[node name="VisibilityAnimator" parent="." instance=ExtResource("2_jqy35")]
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
