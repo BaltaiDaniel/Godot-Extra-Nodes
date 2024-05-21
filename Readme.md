@@ -6,7 +6,7 @@ Contained in this repository are custom nodes for easing your game development e
 
 1. **Download:** Clone this repository or download the ZIP file and extract it.
 2. **Execute:** Run the `project.godot` file.
-3. **Copy:** To copy the custom nodes to an existing project, simply copy the CUSTOM_NODES folder to your project's root directory. Check how to use in the usage section below.
+3. **Copy:** To copy the custom nodes to an existing project, simply copy the CUSTOM_NODES folder to your project's root directory. However, it is advised to rename this to lower caps, as this could cause conflicts when exporting to case-sensitive platforms. Check how to use in the usage section below.
 
 ## Usage
 
