@@ -51,4 +51,4 @@ This addon was created by [Baltai Daniel](https://baltaidaniel.github.io/).
 
 ## Note
 
-When exporting to case-sensitive platforms such as Android, rename the 'CUSTOM_NODES' directory to 'custom_nodes'.
+When exporting to case-sensitive platforms such as Android, rename the `CUSTOM_NODES` directory to `custom_nodes`.
