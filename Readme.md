@@ -10,7 +10,7 @@ Contained in this repository are custom nodes for easing your game development e
 
 ## Usage
 
-To use this template in an existing project, simply copy the `CUSTOM_NODES` folder to the root of your project folder. To use a custom node, simply instance it as a scene in the 2D editor.
+To use this template in an existing project, simply copy the `CUSTOM_NODES` directory to the root of your project directory. To use a custom node, simply instance it as a scene in the 2D editor.
 
 ## Features
 
@@ -47,4 +47,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## About
 
-This addon was created by [Baltai Daniel](https://github.com/BaltaiDaniel).
+This addon was created by [Baltai Daniel](https://baltaidaniel.github.io/).
+
+## Note
+
+When exporting to case-sensitive platforms such as Android, rename the 'CUSTOM_NODES' directory to 'custom_nodes'.
